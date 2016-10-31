@@ -2,8 +2,7 @@
 
 <p>
    <strong>Price: </strong> $<%= @book.price %><br />
-  <strong>Subject: </strong> <%= link_to @book.subject.name,
-:action => "show_subjects", :subject_id => @book.subject.id %><br />
+   <strong>Subject :</strong> <%= @book.subject.name %><br />
    <strong>Created Date:</strong> <%= @book.created_at %><br />
 </p>
 
@@ -12,3 +11,6 @@
 <hr />
 
 <%= link_to 'Back', {:action => 'list'} %>
+<h />
+
+<%=link_to "My home page", book_new_path(@subject) %>
